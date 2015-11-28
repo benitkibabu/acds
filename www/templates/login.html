@@ -1,0 +1,34 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Student Number</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Course</span>
+          <select ng-model="loginData.course">
+            <option value="BA in Management Practice">BA in Management Practice</option>
+            <option value="Bsc Bachelor Honours in Computing">Bsc Bachelor Honours in Computing</option>
+            <option value="BSc (Hons) in Computing - Evening">BSc (Hons) in Computing - Evening</option>
+            <option value="Certificate in Business Analysis">Certificate in Business Analysis</option>
+          </select>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

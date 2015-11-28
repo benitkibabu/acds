@@ -1,0 +1,19 @@
+<ion-view view-title="Services">
+  <ion-content>
+  	<div class="button-bar button-full">
+  		<a class="button button-positive" ng-click="openModal()">New Ticket</a>
+    </div>
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="list card padding">
+	  	<div class="item item-icon-left" ng-repeat="item in serviceList">
+		    <i class="icon ion-stats-bars"></i>
+		    {{item.title}}
+		    <span class="item-note">
+		      {{item.status}}
+		    </span>
+	  	</div>
+	</div>
+  </ion-content>
+</ion-view>
+

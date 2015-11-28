@@ -1,0 +1,30 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">New Ticket</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="newTicket()">
+      <div class="list padding">
+        <label class="item item-input">
+          <input type="text" ng-model="serviceData.title" placeholder="Title" required>
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="serviceData.student_id" placeholder="Student ID" required>
+        </label>
+        <label class="item item-input">
+          <textarea placeholder="Body" ng-model="serviceData.body" required></textarea>
+        </label>
+          <button class="button button-block button-positive" type="submit">Submit</button>
+      </div>
+      <div class="padding">
+        <p ng-show="serviceData.title.$error.required">* title is required</p>
+        <p ng-show="serviceData.student_id.$error.required">* student id is required</p>
+        <p ng-show="serviceData.body.$error.required">* body is required</p>
+    </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
+

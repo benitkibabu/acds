@@ -1,0 +1,14 @@
+<ion-view view-title="Nci Headlines">  
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="doNewsRefresh()">
+    </ion-refresher>
+
+    <ion-list> 
+      <ion-item class="item item-avatar item-text-wrap" ng-repeat="headline in nlist" href="#/app/news/{{headline.id}}">
+    		<img src="img/ionic.png">
+    		<h2>{{headline.title}}  <span class="item-note"> {{headline.date}}</span></h2>
+    		<p>{{headline.body.substring(0, 30)}}...</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

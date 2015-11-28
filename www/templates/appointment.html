@@ -1,0 +1,17 @@
+<ion-view view-title="Appointments">
+  <ion-content >
+  	<div class="button-bar button-full">
+  		<a class="button button-positive" ui-sref="app.appointment" >Request Appointment</a>
+  		
+	</div>
+    <div class="list card padding">
+	  <div class="item item-icon-left" ng-repeat="item in appointmentList">
+	    <i class="icon ion-stats-bars"></i>
+	    {{item.title}}
+	    <span class="item-note">
+	      {{item.status}}
+	    </span>
+	  </div>
+	</div>
+  </ion-content>
+</ion-view>
