@@ -2,16 +2,11 @@
   <ion-content>
     <ion-refresher pulling-text="Pull to refresh" on-refresh="doNewsRefresh()">
     </ion-refresher>
-
     <ion-list> 
-<<<<<<< HEAD
-      <ion-item class="item item-avatar item-text-wrap" ng-repeat="headline in nlist" href="#/app/news/{{headline.id}}">
-=======
-      <ion-item class="item item-avatar item-text-wrap" ng-repeat="headline in nlist" href="#/app/updates/{{headline.id}}">
->>>>>>> version 1.0.1.1
+      <ion-item class="item item-avatar item-text-wrap" ng-repeat="update in nlist" href="#/app/updates/{{headline.id}}">
     		<img src="img/ionic.png">
-    		<h2>{{headline.title}}  <span class="item-note"> {{headline.date}}</span></h2>
-    		<p>{{headline.body.substring(0, 30)}}...</p>
+    		<h4>{{update.title}}<span class="item-note"> {{update.date}}</span></h4>
+    		<p>{{ update.body.length > 30 ? update.body.substring(0, 30) : update.body}}...</p>
       </ion-item>
     </ion-list>
   </ion-content>

@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
   $scope.loginData = {};
 
   // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
+  $ionicModal.fromTemplateUrl('templates/modals/login.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
@@ -50,25 +50,8 @@ angular.module('starter.controllers', [])
   };
 })
 
-<<<<<<< HEAD
-.controller('UpdatesCtrl', function($scope, NciNews) {	
-=======
 .controller('UpdatesCtrl', function($scope, NciUpdates) {	
-  
->>>>>>> version 1.0.1.1
   var list = NciUpdates.all();
-    if(list.length == 0){
-      list = [{
-        title:'No Update', 
-        body:'Sorry we couldnt find any update!',
-        date: new Date(),
-<<<<<<< HEAD
-        type:'App'
-=======
-        target:'App'
->>>>>>> version 1.0.1.1
-      }];
-    }
 
     $scope.nlist = list;
     $scope.doNewsRefresh = function(){
@@ -78,43 +61,13 @@ angular.module('starter.controllers', [])
     }
 })
 
-<<<<<<< HEAD
-.controller('NewsCtrl', function($scope, NciUpdates) { 
-  var list = NciUpdates.all();
-  if(list.length == 0){
-    list = [{
-      title:'No News', 
-      body:'Sorry we couldnt find any news!',
-      date: new Date(),
-      type:'App'
-    }];
-  }
-
-  $scope.nlist = list;
-  $scope.doNewsRefresh = function(){
-    $scope.nlist = NciUpdates.all();
-    $scope.$broadcast('scroll.refreshComplete');
-    $scope.$apply()
-  }
-})
-
 .controller('HeadlineCtrl', function($scope, $stateParams, NciUpdates) {
-	$scope.news = NciUpdates.get($stateParams.updatesId);
-})
-
-.controller('ServiceCtrl', function($scope, $cordovaSQLite, $ionicModal) {
-
-  $scope.serviceData = {};
-  $scope.serviceList = [
-=======
-.controller('HeadlineCtrl', function($scope, $stateParams, NciUpdates) {
-	$scope.update = NciUpdates.get($stateParams.updatesId);
+  $scope.update = NciUpdates.get($stateParams.updatesId);
 })
 
 .controller('ServiceCtrl', function($scope, $cordovaSQLite, $ionicModal) {
   $scope.serviceData = {};
   var serList = [
->>>>>>> version 1.0.1.1
   {
     id:1, student_id:'x08424179',
     title:'Help with login', body:'i cannot log in to the college machine, can i get some assistance?.',
@@ -125,14 +78,10 @@ angular.module('starter.controllers', [])
     title:'Account Blocked', body:'I have recieved a message saying that my account is blocked. Can you reactivate my account?.',
     date: 'November, 10', status:'pending'
   }];
-<<<<<<< HEAD
 
-    // Create the login modal that we will use later
-=======
   $scope.serviceList = serList;
 
->>>>>>> version 1.0.1.1
-  $ionicModal.fromTemplateUrl('templates/service_modal.html', {
+  $ionicModal.fromTemplateUrl('templates/modals/service_modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
   }).then(function(modal) {
@@ -161,30 +110,9 @@ angular.module('starter.controllers', [])
   }
 
   $scope.doRefresh = function(){
-<<<<<<< HEAD
-    $scope.serviceList = [
-      {
-        id:1, student_id:'x08424179',
-        title:'Help with login', body:'i cannot log in to the college machine, can i get some assistance?.',
-        date: 'November, 20', status:'pending'
-      },
-      {
-        id:2, student_id:'x08424179',
-        title:'Account Blocked', body:'I have recieved a message saying that my account is blocked. Can you reactivate my account?.',
-        date: 'November, 10', status:'pending'
-      }];
-=======
     $scope.serviceList = serList;
->>>>>>> version 1.0.1.1
     $scope.$broadcast('scroll.refreshComplete');
     $scope.$apply()
   }
-  
-<<<<<<< HEAD
- // getAll();
 
-
-  
-=======
->>>>>>> version 1.0.1.1
 });

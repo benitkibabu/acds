@@ -1,8 +1,8 @@
 <ion-view view-title="Reminder">
   <ion-content>
-  	<div class="button-bar button-full">
-  		<a class="button button-positive" ui-sref="app.appointment" >New Reminder</a>  		
-	</div>
+  	<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" ui-sref="app.appointment" >
+	  <i class="material-icons">add</i>
+	</button>
 	<div class="list card padding">
 	  	<div class="item item-icon-left" ng-repeat="item in reminderList">
 		    <i class="icon ion-stats-bars"></i>
