@@ -62,10 +62,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller('HeadlineCtrl', function($scope, $stateParams, NciUpdates) {
-  $scope.update = NciUpdates.get($stateParams.updatesId);
+  $scope.update = NciUpdates.get($stateParams.id);
 })
 
-.controller('ServiceCtrl', function($scope, $cordovaSQLite, $ionicModal) {
+.controller('ServiceCtrl', function($scope,$ionicModal) {
   $scope.serviceData = {};
   var serList = [
   {
@@ -94,20 +94,6 @@ angular.module('starter.controllers', [])
   $scope.closeModal = function() {
     $scope.modal.hide();
   };
-
-  $scope.newTicket = function(student_id, title, body){
-    var query = "INSERT INTO ticket(student_id, title, body, status, date) VALUES(?,?,?,?,?)";
-    $cordovaSQLite.execute(db, query, [$scope.serviceData.student_id, 
-                                       $scope.serviceData.title, 
-                                       $scope.serviceData.body, 
-                                       "pending", 
-                                       new date()])
-    .then(function(res) {
-        console.log("INSERT ID -> " + res.insertId);
-      }, function (err) {
-        console.error(err);
-    });
-  }
 
   $scope.doRefresh = function(){
     $scope.serviceList = serList;

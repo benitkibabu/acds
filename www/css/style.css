@@ -4,3 +4,15 @@
     margin-right: auto;
     display: block;
 }
+
+.demo-card-wide.mdl-card {
+  width: 100%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 226px;
+  background: url('img/ionic.png') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}

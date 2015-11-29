@@ -26,15 +26,69 @@
     <script src="js/ng-cordova.min.js"></script>
 
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue-light_blue.min.css" />
-    
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.3/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
 
-  <body ng-app="starter" animation="slide-left-right-ios7">
+  <body ng-app="starter" >
 	<ion-nav-view>
 	</ion-nav-view>
+    
+    <!-- <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="fixed-header-drawer-exp">
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <div class="list list-inset " >
+            <div class="item item-avatar" >
+                <img src="img/ionic.png" />
+                <p class="title">Student Number:</p>
+                <p class="title">Course Name:</p>
+            </div>
+        </div>
+        <span class="mdl-layout-title">Title</span>
 
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.3/material.min.js"></script>
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.3/material.min.js"></script>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" ui-sref="app.updates" href="#/app/updates">
+            <i class="icon ion-ios-information"></i> Updates
+                     <span class="badge badge-assertive">0</span>
+          </a>
+          <a class="mdl-navigation__link" ui-sref="app.reminder">
+            <i class="icon ion-ios-alarm"></i> Reminder
+          </a>
+          <a class="mdl-navigation__link" ui-sref="app.timetable">
+            <i class="icon ion-ios-calendar"></i> Timetable
+          </a>
+          <a class="mdl-navigation__link" ui-sref="app.nci_360">
+            <i class="icon ion-ios-information"></i> Nci 360
+          </a>
+          <a class="mdl-navigation__link" ui-sref="app.settings">
+            <i class="icon ion-ios-settings-strong"></i> Settings
+          </a>
+          <a class="mdl-navigation__link" ng-click="login()">
+            <i class="icon ion-ios-information"></i> Login
+          </a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+            <ion-nav-view name="menuContent">
+            </ion-nav-view>
+        </div>
+      </main>
+    </div> -->
   </body>
 </html>

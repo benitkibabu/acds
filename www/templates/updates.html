@@ -3,7 +3,7 @@
     <ion-refresher pulling-text="Pull to refresh" on-refresh="doNewsRefresh()">
     </ion-refresher>
     <ion-list> 
-      <ion-item class="item item-avatar item-text-wrap" ng-repeat="update in nlist" href="#/app/updates/{{headline.id}}">
+      <ion-item class="item item-avatar item-text-wrap" ng-repeat="update in nlist" href="#/app/updates/{{update.id}}">
     		<img src="img/ionic.png">
     		<h4>{{update.title}}<span class="item-note"> {{update.date}}</span></h4>
     		<p>{{ update.body.length > 30 ? update.body.substring(0, 30) : update.body}}...</p>

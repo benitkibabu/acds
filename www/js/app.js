@@ -1,7 +1,7 @@
 var db = null;
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ionic.utils', 'ngCordova'])
 
-.run(function($ionicPlatform, $cordovaSQLite, $cordovaStatusbar) {
+.run(function($ionicPlatform, $cordovaStatusbar) {
 
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -16,13 +16,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       //StatusBar.styleDefault();
       StatusBar.backgroundColorByHexString("#0C6FE9");
     }
-
-    db = $cordovaSQLite.openDB('myapp.db');
-
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS ticket(id INTEGER primary key AUTOINCREMENT,student_no TEXT not null, title TEXT not null, body TEXT, status TEXT not null, date DATETIME)");
-
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS appointment(id INTEGER primary key AUTOINCREMENT,student_id TEXT not null, title TEXT not null, body TEXT, status TEXT not null, date DATETIME)");
-
   });
 })
 
@@ -44,8 +37,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 		  }
 		}
 	})
+
 	.state('app.details', {
-		url: '/updates/:updatesId',
+		url: '/updates/:id',
 		views: {
 		  'menuContent': {
 			templateUrl: 'templates/details.html',
@@ -108,7 +102,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/updates');
 });
