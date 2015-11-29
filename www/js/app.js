@@ -79,7 +79,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/nci_360',
     views: {
         'menuContent': {
-          templateUrl: 'templates/nci_360.html'
+          templateUrl: 'templates/nci_360.html',
+          controller: 'ServiceCtrl'
       }
     }
   })
@@ -88,8 +89,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/nci_360/:service',
       views: {
         'menuContent': {
-        templateUrl: 'templates/service.html',
-        controller: 'ServiceCtrl'
+        templateUrl: 'templates/service.html'
+        
       }
     }
   })
